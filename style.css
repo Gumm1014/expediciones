@@ -1,0 +1,54 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+body{
+    background-color: rgba(255, 240, 212, 1);
+    color:cornsilk;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    background-color:rgba(46, 125, 50, 1);
+}
+
+nav{
+    background-color:rgba(46, 125, 50, 1) ;
+  
+}
+nav a{
+    color: aliceblue;
+}
+
+footer{
+    background-color: rgba(53, 53, 53, 1);
+    display: flex;
+    /*mt-3 es margen*/
+}
+
+h2{
+    color:rgba(46, 125, 50, 1) ;
+}
+/*---------------------------------------------------*/
+/*Home*/
+.banner{
+    background-image: url("./imagenes/BANNER.jpg");
+    background-size: cover;        /* la imagen llena todo */
+    background-position: center;   /* centrada */
+    background-repeat: no-repeat;
+    height: 400px;                 /* alto del banner */
+    display: flex;                 /* activa flexbox */
+    align-items: center;           /* centra verticalmente el contenido */
+}
+.banner-contenido {
+    font-size: 30px;
+    margin-left: 50px;  /* mueve el texto a la derecha */
+    
+  
+
+}
+
+
+.relleno{
+    color: rgba(53, 53, 53, 1);
+    
+}
+.relleno p{
+    margin-left: 60px;
+}
