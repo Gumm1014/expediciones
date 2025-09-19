@@ -29,12 +29,12 @@ h2{
 /*Home*/
 .banner{
     background-image: url("./imagenes/BANNER.jpg");
-    background-size: cover;        /* la imagen llena todo */
-    background-position: center;   /* centrada */
+    background-size: cover; /* la imagen llena todo */
+    background-position: center; /* centrada */
     background-repeat: no-repeat;
-    height: 400px;                 /* alto del banner */
-    display: flex;                 /* activa flexbox */
-    align-items: center;           /* centra verticalmente el contenido */
+    height: 400px; /* alto del banner */
+    display: flex; /* activa flexbox */
+    align-items: center; /* centra verticalmente el contenido */
 }
 .banner-contenido {
     font-size: 30px;
@@ -52,3 +52,14 @@ h2{
 .relleno p{
     margin-left: 60px;
 }
+
+.tarjetas_excursiones{
+    background-color: rgba(46, 125, 50, 1);
+    color: aliceblue;
+    margin-bottom: 60px;
+}
+.tarjeta_info img{
+    width: 22px;
+}
+
+/*---------------------------------------------------*/
