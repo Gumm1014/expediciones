@@ -25,6 +25,11 @@ footer{
 h2{
     color:rgba(46, 125, 50, 1) ;
 }
+
+h3{
+    color:rgba(46, 125, 50, 1) ;
+}
+
 /*---------------------------------------------------*/
 /*Home*/
 .banner{
@@ -52,7 +57,11 @@ h2{
 .relleno p{
     margin-left: 60px;
 }
+/*fin Home*/
 
+/*---------------------------------------------------*/
+
+/*Tarjetas*/
 .tarjetas_excursiones{
     background-color: rgba(46, 125, 50, 1);
     color: aliceblue;
@@ -60,6 +69,79 @@ h2{
 }
 .tarjeta_info img{
     width: 22px;
+}
+
+
+/*---------------------------------------------------*/
+
+/*NOVEDADES*/
+
+.banner-novedades {
+  background: url("imagenes/imagenes_de_novedades/image 20.png") no-repeat center center/cover;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.banner-novedades h1,
+.banner-novedades p {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  color: white;
+}
+
+.tarjeta img {
+  height: 160px;
+  object-fit: cover;
+}
+
+/*fin novedades*/
+/*------------------------------------------------------*/
+
+.descripcion{
+    color: rgba(0,0,0,0.7);
+}
+
+.carousel-item img {
+  height: 500px;        /* altura fija */
+  object-fit: cover;    /* recorta para que no se deforme */
+  width: 100%;          /* que siempre ocupe el ancho */
+}
+
+.info_excursion{
+    background-color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.info_item{
+    color:rgba(0,0,0,0.7);
+}
+
+.info_item img{
+    width: 70px;
+}
+
+/*style="width: 200px;"*/
+.price { 
+    background:rgba(62, 81, 131, 1);
+    color: white; 
+    padding: 6px 12px; 
+    border-radius: 4px 4px 0 0; 
+    font-weight: bold; 
+} 
+.btn-reservar { 
+    background:rgba(46, 125, 50, 1);
+    color: white; 
+    padding: 6px 12px; 
+    border: none;
+    border-radius: 0 0 4px 4px; 
+    cursor: pointer; 
+    font-size: 14px; 
+} 
+.btn-reservar:hover { 
+    background: darkgreen; 
 }
 
 /*---------------------------------------------------*/
