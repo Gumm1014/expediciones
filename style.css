@@ -27,13 +27,13 @@ h2{
 }
 
 h3{
-    color:rgba(46, 125, 50, 1) ;
+    color:black ;
 }
 
 /*---------------------------------------------------*/
 /*Home*/
 .banner{
-    background-image: url("./imagenes/BANNER.jpg");
+    background-image: url("./imagenes/BANNER.webp");
     background-size: cover; /* la imagen llena todo */
     background-position: center; /* centrada */
     background-repeat: no-repeat;
@@ -48,6 +48,16 @@ h3{
   
 
 }
+
+.titulo_banner {
+   -webkit-text-stroke: 2px black;
+    color: white; /* Color del relleno del texto */
+    font-size: 40px;
+    font-weight: bold;
+
+
+}
+
 
 
 .relleno{
@@ -67,8 +77,23 @@ h3{
     color: aliceblue;
     margin-bottom: 60px;
 }
+
+.tarjetas_excursiones:hover {
+    transform: translateY(-5px); /* sube un poco la tarjeta */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* un poco de sombra */
+    transition: all 0.3s ease; /* animación suave */
+}
+
 .tarjeta_info img{
     width: 22px;
+}
+
+.btn-custom{
+    background-color:cadetblue;
+}
+
+.btn-custom:hover {
+    background-color: rgba(98, 149, 151, 0.9); /* un azul cadet un poco más oscuro */
 }
 
 

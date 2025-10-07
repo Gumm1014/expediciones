@@ -4,9 +4,6 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -38,10 +35,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#" onclick="mostrar_novedades()">Novedades</a>
                         </li>
-
-
                         
-                    
                     </ul>
 
 
@@ -50,12 +44,10 @@
    
                     </form>
                     
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="#" onclick="mostrar_login()">
                         <img src="./imagenes/user-icon-on-transparent-background-free-png.webp" alt="Bootstrap" width="62">
                     </a>
-                    <a class="navbar-brand" href="#">
-                        <img src="./imagenes/engranaje.png" alt="Bootstrap" width="50">
-                    </a>
+                    
 
                 </div>
             </div>
@@ -74,10 +66,10 @@
             <div class="banner mb-5">
                 <div class="banner-contenido">
 
-                    <p>Descubre<br>
+                    <p class="titulo_banner">Descubre<br>
                         la patagonia</p>
 
-                    <button class="btn btn-primary" onclick="mostrar_descripcion_excursion()">Empieza ya</button>
+                    <button class="btn btn-primary" onclick="mostrar_excursiones()">Empieza ya</button>
                 </div>
             </div>
 
@@ -124,7 +116,7 @@
                 <div class="row justify-content-center">
                     
                     <div class="col-12 col-md-3 col-lg-3">
-                        <div class="tarjetas_excursiones card " style="width: 17rem;">
+                        <div class="tarjetas_excursiones card " onclick="desc_excursion(Excursiones[4].id)">
                             <img src="./imagenes/imagenes_de_excursiones/castor.webp" class="card-img-top" alt="...">
                             <div class="tarjeta_info card-body">
                                 <h5 class="card-title">Lagos Escondido y Fagnano + Castoreras</h5>
@@ -132,7 +124,7 @@
 
                                 <hr class="border-white my-4">
                                 <p class="card-text">Precio: $105.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
+                                <button class="btn btn-custom text-white">Reservar</button>
                                 <hr class="border-white my-4">
 
 
@@ -141,15 +133,15 @@
                     </div>    
 
                     <div class="col-12 col-md-3 col-lg-3">
-                        <div class="tarjetas_excursiones card " style="width: 17rem;">
-                            <img src="./imagenes/imagenes_de_excursiones/laguna-esmeralda-2-300x200.jpg" class="card-img-top" alt="...">
-                            <div class="tarjeta_info card-body">
-                                <h5 class="card-title">Trekking Laguna Esmeralda</h5>
-                                <p class="card-text"><img src="./imagenes/Ícono de senderismo blanco.png"> Capacidad: 12 pers. | <img src="./imagenes/Ícono de guía o traductor blanco.png" alt=""> Guía: Alfonsito | <img src="./imagenes/Reloj blanco.png" alt=""> 6 h</p>
+                        <div class="tarjetas_excursiones card " onclick="desc_excursion(Excursiones[0].id)">
+                            <img src="./imagenes/imagenes_de_excursiones/Glaciar Perito Moreno/Glaciar-Perito-Moreno-1.webp" class="card-img-top" alt="...">
+                            <div class="tarjeta_info card-body mb-4">
+                                <h5 class="card-title">Glaciar Perito Moreno</h5>
+                                <p class="card-text"><img src="./imagenes/Ícono de senderismo blanco.png"> Capacidad: 40 pers. | <img src="./imagenes/Ícono de guía o traductor blanco.png" alt=""> Guía: Alfonsito | <img src="./imagenes/Reloj blanco.png" alt=""> 10 h</p>
 
                                 <hr class="border-white my-4">
                                 <p class="card-text">Precio: $140.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
+                                <button class="btn btn-custom text-white">Reservar</button>
                                 <hr class="border-white my-4">
 
                             </div>
@@ -157,7 +149,7 @@
                     </div>  
 
                     <div class="col-12 col-md-3 col-lg-3">
-                        <div class="tarjetas_excursiones card " style="width: 17rem;">
+                        <div class="tarjetas_excursiones card " onclick="desc_excursion(Excursiones[1].id)">
                             <img src="./imagenes/imagenes_de_excursiones/Parque-Nacional-Tierra-del-Fuego-Bahía-Lapataia.jpg" class="card-img-top" alt="...">
                             <div class="tarjeta_info card-body">
                                 <h5 class="card-title">Parque Nacional Tierra del Fuego</h5>
@@ -165,7 +157,7 @@
 
                                 <hr class="border-white my-4">
                                 <p class="card-text">Precio: $70.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
+                                <button class="btn btn-custom text-white">Reservar</button>
                                 <hr class="border-white my-4">
 
                             </div>
@@ -183,113 +175,10 @@
         <section id="excursiones" class="d-none mt-5">
 
             <div class="container">
-                <div class="row tarjetas ">
-                    <h2>Excursiones</h2>
-
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="tarjetas_excursiones card ">
-                            <img src="./imagenes/imagenes_de_excursiones/perito-moreno-glacier-sightseeing-from-el-calafate-1570179.jpg" class="card-img-top" alt="...">
-                            <div class="tarjeta_info card-body">
-                                <h5 class="card-title">Glaciar Perito Moreno</h5>
-                                <p class="card-text"><img src="./imagenes/Ícono de senderismo blanco.png"> Capacidad: 40 pers. | <img src="./imagenes/Ícono de guía o traductor blanco.png" alt=""> Guía: Alfonsito | <img src="./imagenes/Reloj blanco.png" alt="">10 h</p>
-
-                                <hr class="border-white my-4">
-                                <p class="card-text">Precio: $90.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
-                                <hr class="border-white my-4">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="tarjetas_excursiones card ">
-                            <img src="./imagenes/imagenes_de_excursiones/Parque-Nacional-Tierra-del-Fuego-Bahía-Lapataia.jpg" class="card-img-top" alt="...">
-                            <div class="tarjeta_info card-body">
-                                <h5 class="card-title">Parque Nacional Tierra del Fuego</h5>
-                                <p class="card-text"><img src="./imagenes/Ícono de senderismo blanco.png"> Capacidad: 25 pers. | <img src="./imagenes/Ícono de guía o traductor blanco.png" alt=""> Guía: Alfonsito | <img src="./imagenes/Reloj blanco.png" alt=""> 5 h</p>
-
-                                <hr class="border-white my-4">
-                                <p class="card-text">Precio: $70.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
-                                <hr class="border-white my-4">
-
-                            </div>
-                        </div>
-                    </div>
-                     
-
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="tarjetas_excursiones card ">
-                            <img src="./imagenes/imagenes_de_excursiones/laguna-esmeralda-2-300x200.jpg" class="card-img-top" alt="...">
-                            <div class="tarjeta_info card-body">
-                                <h5 class="card-title">Trekking Laguna Esmeralda</h5>
-                                <p class="card-text"><img src="./imagenes/Ícono de senderismo blanco.png"> Capacidad: 12 pers. | <img src="./imagenes/Ícono de guía o traductor blanco.png" alt=""> Guía: Alfonsito | <img src="./imagenes/Reloj blanco.png" alt=""> 6 h</p>
-
-                                <hr class="border-white my-4">
-                                <p class="card-text">Precio: $140.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
-                                <hr class="border-white my-4">
-
-                            </div>
-                        </div>
-                    </div>  
-
+                <h2 class="text-center">Excursiones</h2>
+                <div id="tarje_excursiones" class="row tarjetas ">
                     
-
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="tarjetas_excursiones card ">
-                            <img src="./imagenes/imagenes_de_excursiones/parque-trekking-5.jpg" class="card-img-top" alt="...">
-                            <div class="tarjeta_info card-body">
-                                <h5 class="card-title">Parque Nacional con Trekking y Canoas</h5>
-                                <p class="card-text"><img src="./imagenes/Ícono de senderismo blanco.png"> Capacidad: 12 pers. | <img src="./imagenes/Ícono de guía o traductor blanco.png" alt=""> Guía: Alfonsito | <img src="./imagenes/Reloj blanco.png" alt=""> 8 h</p>
-
-                                <hr class="border-white my-4">
-                                <p class="card-text">Precio: $220.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
-                                <hr class="border-white my-4">
-
-
-                            </div>
-                        </div>
-                    </div>   
-
-
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="tarjetas_excursiones card ">
-                            <img src="./imagenes/imagenes_de_excursiones/castor.webp" class="card-img-top" alt="...">
-                            <div class="tarjeta_info card-body">
-                                <h5 class="card-title">Lagos Escondido y Fagnano + Castoreras</h5>
-                                <p class="card-text"><img src="./imagenes/Ícono de senderismo blanco.png"> Capacidad: 25 pers. | <img src="./imagenes/Ícono de guía o traductor blanco.png" alt=""> Guía: Alfonsito | <img src="./imagenes/Reloj blanco.png" alt=""> 6 h</p>
-
-                                <hr class="border-white my-4">
-                                <p class="card-text">Precio: $105.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
-                                <hr class="border-white my-4">
-
-
-                            </div>
-                        </div>
-                    </div>   
-
-                    
-                    
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="tarjetas_excursiones card pb-5">
-                            <img src="./imagenes/imagenes_de_excursiones/cabo_san_pablo-ushuaia-011-1024x576.jpg" class="card-img-top" alt="...">
-                            <div class="tarjeta_info card-body">
-                                <h5 class="card-title">Cabo San Pablo y Estancia Pirinaica</h5>
-                                <p class="card-text"><img src="./imagenes/Ícono de senderismo blanco.png"> Capacidad: 12 pers. | <img src="./imagenes/Ícono de guía o traductor blanco.png" alt=""> Guía: Alfonsito | <img src="./imagenes/Reloj blanco.png" alt=""> 8 h</p>
-
-                                <hr class="border-white my-4">
-                                <p class="card-text">Precio: $130.000</p>
-                                <button class="btn btn-danger text-white">Reservar</button>
-                                <hr class="border-white my-4">
-
-
-                            </div>
-                        </div>
-                    </div>   
+                    <!--Tarjetas generadas-->
                     
 
                 </div>
@@ -362,7 +251,7 @@
                     <!-- NOTICIAS -->
                      
                     <div class="col-12 col-lg-4 noticias">
-                        <h3>Noticias</h3>
+                        <h2>Noticias</h2>
                         <div class="tarjetas-container">
 
                             <div class="tarjetas_excursiones card ">
@@ -397,93 +286,12 @@
          <!-- CARRUSEL -->
         <section id="desc-excursion" class="descripcion-excursion d-none">
 
-            <div class="container-fluid">
+            <div id="info_excursion" class="container-fluid">
 
 
 
-
-                <h2 class="text-center my-4">Full Day Lagos Escondido y Fagnano </h2>
-
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="./imagenes/imagenes_de_excursiones/lago_escondido_1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="./imagenes/imagenes_de_excursiones/castor_lagos_escondido.jpeg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="./imagenes/imagenes_de_excursiones/lago_escondido_2.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-
-               
-                <!-- BARRA DE INFORMACIÓN -->
 
                 
-                <div class="info_excursion text-center mb-4">
-                    <div class="row">
-                        <div class="info_item col-12 col-md-3 col-lg-3"> 
-                            <img src="./imagenes/reloj.png" alt="">
-                            <span><b>Duración:</b> 6 horas</span> 
-                        </div> 
-                        <div class="info_item col-12 col-md-3 col-lg-3">
-                            <img src="./imagenes/guia_traductor.png" alt="">
-                            <span><b>Guía:</b> Alfonsito </span> 
-                        </div> 
-                        <div class="info_item col-12 col-md-3 col-lg-3"> 
-                            <img src="./imagenes/icono_senderista.png" alt="">
-                            <span><b>Capacidad:</b> 25 personas</span> 
-                        </div> 
-
-                       <div class="col-12 col-md-3 col-lg-2 d-flex flex-column rounded overflow-hidden text-center">
-                            <div class="price text-white p-2">
-                                $103.000
-                            </div>
-                            <button class="btn-reservar fw-bold">
-                                ¡Reservá tu lugar!
-                            </button>
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-
-
-
-               
-                <div class="descripcion">
-                    <h3>Full Day Lagos Escondido y Fagnano </h3>
-                    <p>
-                        Los Lagos Escondido y Fagnano se encuentran en los profundos valles creados por los glaciares de la Cordillera de los Andes, rodeados de mágicos bosques. Esta excursión en Ushuaia nos invita a descubrirlos y explorarlos.
-                    </p>
-                    <p>
-                        El guía recogerá a los pasajeros por sus alojamientos rumbo a la primera parada: el mirador del Valle Carabajal, un punto único para tomar increíbles fotografías. Luego, ingresaremos en la zona de centros invernales, visitando uno de ellos. 
-                    </p>
-                    <p>
-                        Continuando sobre la ruta Nacional N°3, cruzaremos la Cordillera de los Andes fueguinos, a una altura de 430 metros sobre el nivel del mar, observando el Lago Escondido desde el mirador del Paso Garibaldi, famoso en el mundo.
-                    </p>
-                    <p>
-                        Durante la excursión nos cruzaremos con las típicas Castoreras de Ushuaia, también conocidas como diques o madrigueras. Esta especie es una de las más famosas de toda la región austral.
-                    </p>
-                    <p>
-                        Luego llegaremos al Lago Fagnano, uno de los más grandes de la Argentina, cuyo nombre en idioma nativo es “Kami”. Junto a él, se encuentra la histórica estancia “La Carmen”, donde disfrutaremos de un café y una caminata.
-                    </p>
-                    <p>
-                        Como cierre de este mágico paseo almorzaremos en uno de los centros invernales los típicos platos de Ushuaia: cordero fueguino o trucha a la canoa(almuerzo no incluido, debe traerlo usted). 
-                    </p>
-                </div>
 
             </div>
             
@@ -491,11 +299,53 @@
         </section>
 
 
+        <!-- LOGIN -->
+        <section id="login" class="d-none">
+    
+            <div class="min-vh-100 d-flex align-items-center justify-content-center">
+              <div class="row w-100 mx-0 align-items-center justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                  <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-5">
+                      <h3 class="mb-4 text-center text-success fw-bold">Bienvenido</h3>
+          
+                    <form onsubmit="formLog(event)">
+                      
+                        <div class="form-outline mb-4">
+                          <input type="email" id="correo" name="correo" class="form-control form-control-lg" placeholder="Ingresá tu correo" />
+                        </div>
+          
+                        
+                        <div class="form-outline mb-4">
+                          <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Ingresá tu contraseña" />
+                        </div>
+          
+                        
+                        <div class="form-check mb-4 text-center">
+                          <input class="form-check-input me-2" type="checkbox" id="form2Example33" checked />
+                          <label class="form-check-label" for="form2Example33">
+                            Acepto los términos y condiciones
+                          </label>
+                        </div>
+          
+                        
+                        <button type="submit" class="btn btn-success btn-lg w-100 shadow-sm rounded-3">
+                            Iniciar sesión
+                        </button>  
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
         <section id="gammajack" class="d-none">
 
-            <div class="text-center">
-                <h2>Siempre tiene que haber mucho daño colateral</h2>
-                <img src="./imagenes/Gamma_Jack.webp" alt="">
+            <div class="text-center mt-5" style="padding-bottom: 200px;">
+                
+                <img src="https://preview.redd.it/qllxhuz73gnf1.jpeg?width=1080&crop=smart&auto=webp&s=45f11d7b90ec0b190fece9759698206112c77536" class="img-fluid" width="500">
             </div>
         </section>
     </main>
@@ -538,23 +388,27 @@
             </div>    
 
         </div>
-
-        
+       
 
     </footer>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
 <script>
     let home = document.getElementById("home");
     let excursiones = document.getElementById("excursiones");
     let novedades = document.getElementById("novedades");
     let descripcion_excursion = document.getElementById("desc-excursion");
+    let login = document.getElementById("login");
     let gammajack = document.getElementById("gammajack");
     function mostrar_home(){
         home.classList.remove("d-none");
         excursiones.classList.add("d-none");
         novedades.classList.add("d-none");
         descripcion_excursion.classList.add("d-none");
+        login.classList.add("d-none");
       
         gammajack.classList.add("d-none");
     }
@@ -564,6 +418,7 @@
         home.classList.add("d-none");
         novedades.classList.add("d-none");
         descripcion_excursion.classList.add("d-none");
+        login.classList.add("d-none");
         gammajack.classList.add("d-none");
  
         
@@ -574,17 +429,21 @@
         home.classList.add("d-none");
         excursiones.classList.add("d-none");
         descripcion_excursion.classList.add("d-none");
+        login.classList.add("d-none");
         gammajack.classList.add("d-none");
     }
 
-    function mostrar_descripcion_excursion() {
-        descripcion_excursion.classList.remove("d-none");
+    
+
+    function mostrar_login(){
+        login.classList.remove("d-none");
         home.classList.add("d-none");
         excursiones.classList.add("d-none");
         novedades.classList.add("d-none");
-        
-    }
+        descripcion_excursion.classList.add("d-none");
 
+        gammajack.classList.add("d-none");
+    }
 
     function mostrar_gammajack(){
         gammajack.classList.remove("d-none");
@@ -592,6 +451,7 @@
         excursiones.classList.add("d-none");
         descripcion_excursion.classList.add("d-none");
         novedades.classList.add("d-none");
+        login.classList.add("d-none");
     }
 </script>
 
